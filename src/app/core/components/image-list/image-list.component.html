@@ -1,0 +1,7 @@
+<div class="image-row">
+    <div *ngFor="let column of listImages" class="image-column">
+        <app-image-card (byUnfavouriteClick)="onImageChange(imageItem.id)" [type]="type" *ngFor="let imageItem of column; let i = index"
+            [image]="imageItem">
+        </app-image-card>
+    </div>
+</div>

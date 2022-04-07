@@ -1,0 +1,12 @@
+<mat-nav-list class="pt-0">
+  <div *ngFor="let item of routes" class="p-0">
+    <a *ngIf="item.type!=='button'" mat-list-item [routerLinkActive]="'active'" [routerLink]="['/' + item.path]">
+      <mat-icon class="sidenav-icon">{{ item.data.icon }}</mat-icon>
+      {{ item.data.text }}
+    </a>
+    <a *ngIf="item.type==='button'" mat-list-item (click)="onLoggedout()" >
+      <mat-icon class="sidenav-icon">{{ item.data.icon }}</mat-icon>
+      {{ item.data.text }}
+    </a>
+  </div>
+</mat-nav-list>

@@ -1,0 +1,10 @@
+{
+  "RequiredFirstName": "Please enter full name.",
+  "InvalidEmail": "E-mail address is invalid.",
+  "RequiredEmail": "E-mail address field cannot be empty.",
+  "RequiredPassword": "Password field cannot be empty.",
+  "DefaultError": "Something went wrong. Please refresh the page or try again later.",
+  "ErrorOccurred": "Error occurred while processing your request.",
+  "RectifyErrors": "Please rectify all errors by providing required details.",
+  "ApiNotRunning": "Remote API is not running. Please try after some time."
+}

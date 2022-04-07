@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  diatoz-app:
+    build: .
+    container_name: diatoz-app
+    restart: always
+    ports:
+      - "4700:80"

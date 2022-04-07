@@ -1,0 +1,12 @@
+<div class="layout-container">
+  <app-header (sideNavToggled)="snav.toggle()"></app-header>
+
+  <mat-sidenav-container class="sidenav-container" [style.marginTop.px]="toolBarHeight">
+    <mat-sidenav #snav class="sidenav mat-elevation-z2" [mode]="sideNavMode" [opened]="sideNavOpened">
+      <app-sidebar></app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

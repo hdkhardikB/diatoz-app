@@ -1,0 +1,24 @@
+<mat-toolbar color="primary" class="fix-nav">
+  <mat-toolbar-row>
+    <button type="button" mat-icon-button class="visible-sm" (click)="toggleSidebar()">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <h1>Image Gallery</h1>
+    
+    <div class="hidden-sm">
+      <a mat-button [routerLink]="'/home'"> Home </a>
+      <a mat-button [routerLink]="'/favourites'"> Favourites </a>
+    </div>
+    <span class="nav-spacer"></span>
+    <button class="hidden-sm profile-button" *ngIf="user" mat-icon-button [matMenuTriggerFor]="profile">
+      <mat-icon>person</mat-icon>
+      {{headerUserName}}
+    </button>
+    <mat-menu #profile="matMenu" [overlapTrigger]="true">
+      <button (click)="onLoggedout()" mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>

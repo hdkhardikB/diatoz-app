@@ -1,0 +1,16 @@
+<div *ngIf="image" class="card">
+    <img class="tile" [src]="image.downloadUrl" [alt]="image.url" />
+    <div class="overlay">
+        <div class="action">
+            <button mat-icon-button color="warn" (click)="onMarkFavourite(image)" aria-label="Mark image as favourite">
+                <mat-icon *ngIf="type==='general' && !image.isFavourite">favorite_border</mat-icon>
+                <mat-icon *ngIf="type==='favourite' || image.isFavourite">favorite</mat-icon>
+            </button>
+            <a mat-icon-button [href]="image.downloadUrl" target="_blank" rel="noopener noreferrer">
+                <mat-icon>download</mat-icon>
+            </a>
+            <div class="text">{{image.author}}</div>
+        </div>
+        
+    </div>
+</div>

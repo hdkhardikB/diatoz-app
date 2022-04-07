@@ -1,0 +1,17 @@
+$primary-color: #200d4d;
+$white: #ffffff;
+$main-background-color: #fafafa;
+
+$indigo-palette: (
+  50: #bda9ee,
+  100: #4d318f,
+  200: #230078,
+  300: $primary-color,
+  400: #0bbf53,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+  ),
+);

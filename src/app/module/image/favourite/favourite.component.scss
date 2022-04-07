@@ -1,0 +1,11 @@
+.grid-container {
+  padding: 30px 20px 30px 20px;
+  .grid {
+    overflow: auto;
+    max-height: calc(100vh - 250px);
+  }
+  .no-data {
+    width: 100px;
+    margin-bottom: 25px;
+  }
+}

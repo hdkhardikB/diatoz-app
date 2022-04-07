@@ -1,0 +1,14 @@
+<div class="grid-container">
+    <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+    <div class="grid" [infiniteScrollThrottle]="300" [infiniteScrollDistance]="0.2" infiniteScroll [scrollWindow]="false" (scrolled)="onScroll()">
+        <app-image-list (byUnfavouriteClick)="onFavouriteClick($event)" [type]="'general'" [images]="imageList"></app-image-list>
+    </div>
+    <div *ngIf="!isLoading && imageList.length <= 0" class="row">
+        <div class="col-12 text-center">
+            <img src="../../../../assets/images/no-data.png" class="no-data" alt="no-data">
+            <p class="text-center mb-0">
+                No records found
+            </p>
+        </div>
+    </div>
+</div>
